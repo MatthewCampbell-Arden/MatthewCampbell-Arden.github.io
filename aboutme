@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .header{
+        border: 5px outset rgb(0, 0, 0);
+        background-color:rgb(255, 255, 255);
+        text-align: center;
+        width: auto;
+        padding-left:50px;
+    }
+</style>
+<style>
+    #Header{color: rgb(8, 7, 20);}
+</style>
+<body style="background-color: rgb(122, 122, 173);">
+<div class="header">
+    <h1 style="color: blue;width: 200px;">About Me</h1>
+</div>
+    
+    <img src="images/Profile-square-rounded-MC.png" alt="Picture of Matthew Campbell" style="width: 250px;height: auto;">
+    <br>
+    <h3 id="Header" style="font-size: larger; font-style: italic;">Who Am I?</h3>
+    <!--Please understand this, I feel so old and its the only thing I think of when someone asks this-->
+    <img src="images/JackieChanWhoAmI.jpg" style="width: 100px;">
+    <p>My name is Matthew Campbell and I am a design and Technology teacher. I have a passion for teaching and problem solving, and I am facinated by the ways that people percieve the world</p>
+    <p>I am currently proficent in the following subjects:</p>
+        <ul>
+            <li>Design and Technology</li>
+            <li>Technology Mandatory</li>
+            <ul>
+                <li>Digital Technologies</li>
+                <li>Metalwork</li>
+                <li>Timber</li>
+                <li>Textiles</li>
+            </ul>
+            <li>Industrial Technology Engineering</li>
+            <li>Mechatronics and Robotics</li>
+            <li>Timber</li>
+            
+        </ul>
+        <img src="images/Teaching Area Infographic.png"style="width: 500px;">
+    <h2 style="font-size: larger;">Current Employment</h2>
+    <p>I am currently teaching at Arden Secondary School in the Technology Department. The classess that I am teaching are:</p>
+            <ol>
+                <li>Design and Technology years 9 and 10</li>
+                <li>Industrial Technology Engineering year 10</li>
+                <li>Technology Mandatory stage 4: Metal and Digital Technologies with 4 classes</li>
+            </ol>
+    <br>
+<p>Here is a Link to my current School</p>
+<!--This is a link to the school using the image as a hyperlink-->
+<a href="https://www.arden.nsw.edu.au/" target="_blank"><img src="images/Arden_Anglican_Logo.png" style="width: 100px;" alt="Arden Anglican"></a>
+    
+</body>
+</html>
