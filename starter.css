@@ -18,20 +18,22 @@ html, body {
   padding: 0;   /* Removes default browser padding */
 }
 img { 
-  max-width: 100%;  /* Ensures images never exceed container width */
+  max-width: 50%;  /* Ensures images never exceed container width */
   height: auto;     /* Maintains image aspect ratio */
   display: block;   /* Removes small gap under images by making them block-level */
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /* ---------- 2) Core Theme Tokens ----------- */
 :root {
-  --brand: #1c4c96;        /* primary colour */
+  --brand: #000000;        /* primary colour */
   --brand-2: #f39c12;      /* accent colour */
   --bg: #ffffff;           /* page background */
-  --head: #0FDE4B;         /* main header colour */
-  --text: #222222;         /* default text */
+  --head: #000000;         /* main header colour */
+  --text: #000000;         /* default text */
   --muted: #666666;        /* secondary text */
-  --surface: #f6f8fb;      /* card/section bg */
+  --surface: rgb(246, 248, 251,0.85);      /* card/section bg */
   --radius: 12px;          /* rounded corners */
   --shadow: 0 4px 12px rgba(0,0,0,0.08);    /* Subtle shadow for depth */
   --spacing: 16px;         /* base spacing unit */
@@ -42,7 +44,9 @@ img {
 
 /* ---------- 3) Page Defaults --------------- */
 body {
-  background: var(--bg);          /* Uses background colour from variables */
+  background-image: url("images/Background-Hex-Monochrome.png");          /* Uses background image from variables */
+  background-size: cover;                                                 /*Sets the background to not take too much space*/
+  background-attachment: fixed;                                           /*Stops the background from moving and repeating the image*/
   color: var(--text);             /* Default text colour */
   font-family: var(--font-body);  /* Sets font for body text */
   line-height: 1.6;               /* Improves readability by spacing out lines */
@@ -83,9 +87,10 @@ a:hover, a:focus {
 
 /* ---------- 6) Header / Nav ---------------- */
 header {
-  background: linear-gradient(0deg, #0f3460, #1c4c96);  /* Gradient background */
-  color: white;                                           /* White text */
-  padding: 18px 0;                                          /* Vertical spacing */
+  background-image: url(images/Timber-grain-background.jpg);  /* Image Background */
+  background-size:cover;
+  color: rgb(255, 255, 255,0.7);                                           /* White text */
+  padding: 5px 0;                                          /* Vertical spacing */
   box-shadow: var(--shadow);                                /* Subtle shadow for depth */
   margin-bottom: 0;                                         /* Removes gap under header */
 }
@@ -98,12 +103,25 @@ header .container {
   justify-content: space-between;                     /* Pushes items apart */
 }
 header h1 {
+  background: var(--surface);
+  border-radius: var(--radius);
   width: min(100% - 2*var(--spacing), var(--maxw));   /* Responsive heading width */
+  max-width: fit-content;
   margin: 32px auto;                                  /* Centers heading */
   color: var(--head);                                 /* Special header colour */
 }
+header h2 {
+  background-image: none;
+  width: min(100% - 2*var(--spacing), var(--maxw));   /* Responsive heading width */
+  max-width: fit-content;
+  margin: 32px auto;                                  /* Centers heading */
+  color: var(--head);                                 /* Special header colour */
+
+}
 nav {
   background: #333;             /* Dark grey background for nav bar */
+  background-size:cover;
+  
   font-size: 0.95rem;             /* Slightly smaller font in navigation */
   width: 100%;                    /* Spans full width */
   margin: 32px auto;              /* Space above page content; no top gap */
@@ -152,6 +170,7 @@ nav a:focus-visible {
   padding: calc(var(--spacing) * 1.25); /* Internal spacing */
   margin: 18px 0;                       /* Vertical spacing */
   box-shadow: var(--shadow);            /* Subtle shadow */
+  
 }
 .profile {
   display: flex;                  /* Enables horizontal flex layout (side-by-side arrangement) */
@@ -165,7 +184,8 @@ nav a:focus-visible {
   display: block;                 /* Makes the image behave like a block element (so margin works) */
   margin-left: auto;              /* Centres the image horizontally */
   margin-right: auto;             /* Centres the image horizontally */
-  width: 20%;                     /* Limits the image width to 35% of its container */
+  width: 1000px;                     /* Limits the image width to 35% of its container */
+  height: auto;
   border-radius: 8px;             /* Rounds the corners of the image slightly */
 }
 .main-photo { 
@@ -188,6 +208,7 @@ table {
   border-collapse: collapse;  /* Removes double borders */
   margin-top: 10px;           /* Space above table */
   font-family: Arial, sans-serif;     /* Table font */
+  background-color: #ccc;
 }
 th, td {
   border: 1px solid #ccc;   /* Light grey cell borders */
@@ -200,6 +221,7 @@ thead {
 th {
   color: #333;              /* Dark grey header text */
   font-weight: bold;          /* Bold header text */
+  background-color: #f0f0f0;
 }
 tr:nth-child(even) {
   background-color: #fafafa;  /* Zebra stripe effect for even rows */
