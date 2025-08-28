@@ -109,6 +109,7 @@ header h1 {
   max-width: fit-content;
   margin: 32px auto;                                  /* Centers heading */
   color: var(--head);                                 /* Special header colour */
+  padding: 0.25em 0.75em;
 }
 header h2 {
   background-image: none;
