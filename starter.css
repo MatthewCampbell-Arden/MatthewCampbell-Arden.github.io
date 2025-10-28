@@ -183,11 +183,15 @@ nav a:focus-visible {
 }
 .profile-photo {
   display: block;                 /* Makes the image behave like a block element (so margin works) */
+  margin-top: auto;
+  margin-bottom: auto;
   margin-left: auto;              /* Centres the image horizontally */
   margin-right: auto;             /* Centres the image horizontally */
   width: 1000px;                     /* Limits the image width to 35% of its container */
   height: auto;
   border-radius: 8px;             /* Rounds the corners of the image slightly */
+  max-width: 250px;
+  max-height: 250px;
 }
 .main-photo { 
   max-width: 250px;       /* resizes maximum width of these images within the sections */
@@ -234,6 +238,7 @@ tr:nth-child(even) {
   justify-content: space-between;   /* Space between items */
   margin-top: 20px;                 /* Space above container */
 }
+
 .project-card {
   flex: 1 1 350px;                /* Responsive card width */
   background-color: #f9f9f9;    /* Light grey background */
@@ -379,4 +384,60 @@ footer .container {
   padding: 24px !important;     /* Large padding */
 }
 
+/* Quote card*/
+
+.flex-container2 {
+  display: flex;                    /* Horizontal flex layout */
+  flex-wrap: wrap;                  /* Wraps to next line if needed */
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  gap: 20px;                        /* Space between items */
+  justify-content: space-between;   /* Space between items */
+  margin-top: 20px;                 /* Space above container */
+  background-color: #f9f9f944;
+  border-radius: var(--radius);
+  margin-left: auto;
+}
+.quote-card {
+  flex: 1 1 350px;                /* Responsive card width */
+  background-color: #f9f9f98e;    /* Light grey background */
+  border: 1px solid #000000;       /* Light border */
+  padding: 15px;                  /* Space inside card */
+  border-radius: 8px;             /* Rounded corners */
+  box-shadow: 1px 2px 4px rgba(0,0,0,0.1);      /* Soft shadow */
+}
+
+#quote-box {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 80%;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f986;
+  text-align: center;
+  font-style: italic;
+  font-size: 1.2em;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  transition: opacity 0.5s ease-in-out; /*interacts with js to proive a smooth transition in and out. */
+
+}
+/* These provide 2 different fonts for the quote + sizes */
+#quote-text {
+  margin: 10px 0;
+  opacity: 1;
+  font-size: larger;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#quote-author {
+  margin: 10px 0;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
 /* End of starter.css */
